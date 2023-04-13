@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Ap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="output-container">
+            <h2 class="title">OUTPUT</h2>
+            <!-- memes section-->
+            <h3>Programmer Memes</h3>
+            <div class="memes-content">
+            </div>
+            <!-- jokes section-->
+            <h3>Tell Me Something Funny</h3>
+            <div class="jokes-content"></div>
+            <!-- qoutes section-->
+            <h3>Give Me Some Wisdom...</h3>
+            <div class="qoutes-content"></div>
+            <!-- riddles section-->
+            <h3>I Want a Riddle</h3>
+            <div class="riddles-content"></div>
+        </div>
+        <div class="action-container big-screen">
+            <h2 class="title">ACTIONS</h2>
+            <button onclick="show_memes()">Show a Meme</button>
+            <button onclick="show_jokes()">Tell Me a Joke</button>
+            <button onclick="show_qoutes()">Random Qoutes</button>
+            <button onclick="show_riddles()">Riddle Me</button>
+            <button onclick="answer_riddles()">Reveal Riddle Answer</button>
+        </div>
+        
+        <div class="actions mobile">
+          <button id="drop-action"></button>
+          <div class="drop-actions">
+            <ul>
+              <li onclick="show_memes()">Show a Meme</li>
+              <li onclick="show_jokes()">Tell Me Something Funny</li>
+              <li onclick="show_qoutes()">Give Me Some Wisdom</li>
+              <li onclick="show_riddles()">Riddle Me</li>
+              <li onclick="answer_riddles()">Reveal Riddle</li>
+            </ul>
+          </div>
+        </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

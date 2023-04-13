@@ -1,0 +1,223 @@
+/* Removing margins and padding from the body tag */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #355c7d;
+    color:#8067a9;
+}
+.wrapper{
+    margin: auto;
+    margin-top:1.5em;
+    width:80%;
+    padding:20px;
+    height:430px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:row;
+    border-radius: 1.8em;
+    box-sizing: border-box;
+    position:relative;
+}
+.title{
+    margin-bottom:20px;
+}
+.output-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: #8067a9;
+    color:#faf9fb;
+    width:70%;
+    padding:20px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.output-container *{
+    box-sizing: border-box;
+}
+.riddles-content{
+    width:100%;
+    word-wrap: break-word;
+}
+.riddles-content .riddle_tag{
+    box-sizing: border-box;
+    font-size:12px;
+    width:300px;
+    color:#bfb0d1;
+}
+.riddles-content :not(.riddle_tag){
+    color:#bfb0d1;
+    font-size: 10px;
+    margin-top:10px;
+}
+.action-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:30%;
+    border-left:2px solid #8067a9;
+    padding:20px 30px;
+    background-color: #faf9fb;
+}
+.big-screen button{
+    display: inline-block;
+    background-color: transparent;
+    border:2px solid #8067a9;
+    color: #8067a9;
+    padding:8px;
+    border-radius: .5em;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+.action-container button:hover{
+    box-shadow: 0 2px 2px #ccc;
+}
+.action-container #answer_btn{
+    border:2px solid transparent;
+    text-decoration:underline;
+}
+.action-container #answer_btn:hover{
+    border:2px solid transparent;
+}
+#answer_btn{
+    font-size: 20px;
+    display: none;
+    position:absolute;
+    bottom:100px;
+    right: 8px;
+    color:#8067a9;
+    background-color: #faf9fb;
+    margin:0 6px;
+    padding: 10px;
+    border:1px solid  transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ccc;
+    cursor: pointer;
+}
+img{
+    width:200px;
+    height:200px;
+    border:2px solid#8067a9;
+    border-radius: .6em;
+    margin:10px 0;
+    padding:10px;
+    background:#faf9fb;
+    box-shadow: 0 0 5px 3px #bfb0d1;
+}
+.actions{
+  display: none;
+}
+@media(max-width: 480px) {
+    .wrapper{
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        margin:0;
+        border-radius: 0px;
+    }
+    .output-container{
+        width:100%;
+        height: 100%;
+        position: absolute;
+        margin:0;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        overflow:hidden;
+        
+    }
+    .big-screen{
+        display: none;
+
+    }
+    .actions{
+      display:inline-block;
+      position: absolute;
+      bottom: 30px;
+      right:10px;
+    }
+    .actions button{
+      width:60px;
+      height: 60px;
+      border-radius: 50%;
+      background:white;
+      border: 1px solid white;
+      position: relative;
+      box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+    .actions #drop-action:after{
+      content:"";
+      width: 15px;
+      height: 15px;
+      background:url('icon-arrow-up.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top:22px;
+      left:22px;
+    }
+    .actions .drop-actions{
+      width: 200px;
+      background:white;
+      padding:5px;
+      display:none;
+      color: #8067a9;
+      position: absolute;
+      bottom: 120%;
+      right:20px;
+      border-radius: 6px;
+    }
+    .actions .drop-actions:after{
+      content:"";
+      border-style: solid;
+      border-width: 10px;
+      border-color: white transparent transparent transparent;
+      position:absolute;
+      right:0;
+      top:98%;
+      z-index: 0;
+    }
+    .actions ul{
+      list-style-type: none;
+      margin:0;
+      padding: 0;
+    }
+    .actions li{
+      padding: 8px 10px;
+      z-index: 1;
+      border-radius: 5px;
+    }
+    .actions li:hover{
+      cursor: pointer;
+      background: #8067a9;
+      color: white;
+    }
+    .actions:hover .drop-actions{
+      display: inline-block
+    }
+    .actions:hover #drop-action:after{
+      background: url('icon-arrow-down.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .mobile{
+        display:flex;
+    }
+    #answer_btn{
+        display:inline-block;
+    }
+} 
