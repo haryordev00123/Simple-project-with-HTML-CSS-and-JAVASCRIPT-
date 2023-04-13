@@ -6,7 +6,7 @@ Users are able to:
 - See hover states for interactive elements
 
 ### Links
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://haryordev00123.github.io/Simple-project-with-HTML-CSS-and-JAVASCRIPT-/)
 
 ### Built with
 
